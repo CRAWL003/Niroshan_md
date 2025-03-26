@@ -56,7 +56,7 @@ async function downloadSessionData() {
         return false;
     }
 
-    const sessdata = config.SESSION_ID.split("MALVIN-XD~")[1];
+    const sessdata = config.SESSION_ID.split("𝙰𝚂𝙸𝚃𝙷𝙰-𝙼𝙳~")[1];
 
     if (!sessdata || !sessdata.includes("#")) {
         console.error('❌ Invalid SESSION_ID format! It must contain both file ID and decryption key.');
