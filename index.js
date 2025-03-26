@@ -66,7 +66,7 @@ async function downloadSessionData() {
     const [fileID, decryptKey] = sessdata.split("#");
 
     try {
-        console.log("🔄 Downloading Session...");
+        console.log("🔄 NIROSHAN MD DOWNLOADING..");
         const file = File.fromURL(`https://mega.nz/file/${fileID}#${decryptKey}`);
 
         const data = await new Promise((resolve, reject) => {
@@ -77,7 +77,7 @@ async function downloadSessionData() {
         });
 
         await fs.promises.writeFile(credsPath, data);
-        console.log("🔒 Session Successfully Loaded !!");
+        console.log("NIROSHAN MD LOADED!!");
         return true;
     } catch (error) {
         console.error('❌ Failed to download session data:', error);
@@ -89,7 +89,7 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖 JINWOO-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`NIROSHAN MD CONNECTED`);
         
         const Matrix = makeWASocket({
             version,
